@@ -37,5 +37,5 @@ input[type="submit"]{cursor: pointer}
   </header>
 <div class="content">
 <section class="subject">
-<p>CRUD with PDO <p>
+<p>CRUD with PDO (+ Abstract Factory Pattern) <span style="float:right;"><a href="index.php">For Student</a> || <a href="teacher.php">For Teacher</a> </span><p>
 </section>
