@@ -1,8 +1,8 @@
 <?php include 'inc/header.php'; ?>
 
 <?php 
-     spl_autoload_register(function($class){   // ERROR - on each refreshing it's readding last new record..
-        include 'classes/'.$class.'.php';
+     spl_autoload_register(function($class_name){   // ERROR - on each refreshing it's readding last new record..
+        include "classes/".$class_name.".php";   // https://www.youtube.com/watch?v=bRMmLo1FHK0
      });
 ?>
 
@@ -54,7 +54,6 @@
       <td></td>
         <td>
         <input type="submit" name="create" value="Submit"/>
-        <input type="reset" value="Clear"/>
         </td>
     </tr>
   </table>

@@ -1,11 +1,13 @@
 <?php
-    include "classes/DB.php";
-    class Student {   
-        private $table = 'tbl_student';
+    include "classes/Main.php";
+
+    class Student extends Main {   
+        protected $table = 'tbl_student';
         private $name;
         private $dep;
         private $age;
         
+        // SET Parametres
         public function setName($name){
             $this->name = $name;
         }
@@ -25,22 +27,5 @@
             $stmt->bindParam(':age', $this->age);
             return $stmt->execute();
         }
-
-        public function readAll(){
-           $sql = "SELECT * FROM $this->table";
-           $stmt = DB::prepare($sql);
-           $stmt->execute();
-           return $stmt->fetchAll();
-       } 
-
-       // DELETE DATA
-       public function delete($id){
-           $sql = "DELETE FROM $this->table WHERE id=:id";
-           $stmt = DB::prepare($sql);
-           $stmt->bindParam(':id', $id);
-           return $stmt->execute();
-       }
-       
-
     }
 ?>
