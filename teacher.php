@@ -13,7 +13,7 @@
         $name = $_POST['name'];
         $dep  = $_POST['dep'];
         $age  = $_POST['age'];
-
+        
         $user->setName($name);
         $user->setDep($dep);
         $user->setAge($age);
